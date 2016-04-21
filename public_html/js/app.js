@@ -112,8 +112,8 @@ angular.module('AppModule', ['ngRoute', 'ClienteModule', 'ImovelModule', 'Alugue
                 .config(['$routeProvider', function ($routeProvider) {
                         $routeProvider.
                                 // CLIENTE
-                                when('/relatorioCli', {
-                                    templateUrl: 'partials/relatorioCliente.html',
+                                when('/valoresPagos', {
+                                    templateUrl: 'partials/valoresPagos.html',
                                     controller: 'ClienteController'
                                 }).
                                 when('/cliente-lista', {
@@ -125,8 +125,8 @@ angular.module('AppModule', ['ngRoute', 'ClienteModule', 'ImovelModule', 'Alugue
                                     controller: 'ClienteController'
                                 }).
                                         
-                                 when('/relatorioImo', {
-                                    templateUrl: 'partials/relatorioImovel.html',
+                                 when('/rankingImoveis', {
+                                    templateUrl: 'partials/rankingImoveis.html',
                                     controller: 'ImovelController'
                                 }).  
                                         
