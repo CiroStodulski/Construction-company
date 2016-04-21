@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AppModule">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Contrutora</title>
+
+        <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
+        <script src="bower_components/angular-route/angular-route.min.js" type="text/javascript"></script>
+        
+        <script src="js/app.js" type="text/javascript"></script>
+        <script src="js/cliente-controller.js" type="text/javascript"></script>
+        <script src="js/imovel-controller.js" type="text/javascript"></script>
+        <script src="js/aluguel-controller.js" type="text/javascript"></script>
+        <!-- Bootstrap Core CSS -->
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="dist/css/new.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body ng-controller="AppController">
+
+        <div class="container">
+
+             <div class="text-right usuario-logado">
+                        Ciro Stodulski de Azevedo [<a href="#/">logout</a>]
+                    </div>	
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="navigation" style="margin-bottom: 0">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand"><b>Odebrecht Construtora</b></a>
+                </div>
+
+
+                <div class="navbar-inverse sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-inverse ">
+                        <ul class="nav navbar-nav" id="side-menu">
+                             <li>
+                                <a href="#/aluguel">Aluguel</a>
+                            </li>
+
+                            <li>
+                                <a href="#/relatorio">Cadastro de Relatorios</a>
+                            </li>
+
+                            <li>
+                                <a href="#/cliente-lista">Cadastro de cliente</a>
+                            </li>
+                            <li>
+                                <a href="#/Porcentagem">Porcentagem de Entrega</a>
+                            </li>
+
+                            <li>
+                                <a href="#/reclamacao">Indice de reclamação</a>
+                            </li>
+                            <li>
+                                <a href="#/Imovel_Lista">Cadastro Imoveis</a>
+                            </li>
+                          
+                        </ul>
+                    </div>
+
+                </div>
+
+            </nav>
+
+            <div id="page-wrapper">
+
+                <div class="col-md-12">
+                    <!-- ONDE SÃO INSERIDAS AS PÁGINAS; PARTIALS -->
+                    <div ng-view/>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row" id="rodape">
+            <div class="col-md-6 text-left" >
+                
+                <img src="img/odebrecht.png" alt=""/>
+            </div>
+            <div class="col-md-6 text-right" >
+
+                <address>
+                    <strong>Edifício Odebrecht São Paulo</strong><br />Rua Lemos Monteiro, 120 - 18° andar<br />CEP 05501-050 São Paulo, SP - Brasil<br /> <abbr title="Phone">P:</abbr> (51) 3096 8000 / 3025 7000
+                </address>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

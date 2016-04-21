@@ -1,0 +1,106 @@
+<script>
+     function zera()
+            {
+                $(document).ready(function () {
+                    var zerar ='';
+                      $('#ImovelCombo').val(5);
+               
+                });
+            }
+</script>
+<div class="row">
+     <div class="col-md-12">
+        <h3>Cadastrar novo inquilino</h3>
+        <hr>
+    </div>
+   <div class="row">
+		<div class=" col-md-6 ">
+			<form role="form">
+				<div class="form-group">					 
+					<label for="Imovel">
+						Imovel
+					</label>
+                                    <select class="form-control" id="ImovelCombo" ng-model="aluguel.nome">
+                                        <option ng-repeat="(key, value) in listaImovel | filter:filtroCombo" >{{value.nome}}</option>
+                                    </select>
+				</div>
+				<div class="form-group">					 
+					<label for="cliente">
+						Cliente
+					</label>
+					 <select class="form-control" id="ImovelCombo" ng-model="aluguel.cliente">
+                                        <option ng-repeat="(key, value) in listaCliente | filter:filtroCombo" >{{value.nome}}</option>
+                                    </select>
+				</div>
+                            <div class="form-group">					 
+					<label for="Dias">
+						Dias
+					</label>
+					 <select class="form-control" id="ImovelCombo" ng-model="aluguel.dias">
+                                        <option>5</option>
+                                        <option>10</option>
+                                        <option>15</option>
+                                        <option>30</option>
+                                    </select>
+				</div>
+                            
+			</form>
+
+		</div>
+       
+         
+                <div class="col-xs-2">
+                    <hr>
+                    <div class="form-group">
+			<button type="button" ng-click="salvar()" class="btn btn-danger"><span class="glyphicon glyphicon-save"></span> Salvar</button>
+			</div>
+                    <hr>
+		</div>
+	</div>
+    
+    <div class="col-md-12">
+        <h3>Lista de algueis</h3>
+        <hr>
+    </div>
+
+
+    <div class="col-md-10">
+        <div class="text-center">
+
+
+
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Imovel</th>
+                        <th>Cliente</th>
+                        <th>Dias contratados</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="(key, value) in listaaluguel | filter:pesquisa">
+                        <td>{{value.nome}}</td>
+                        <td>{{value.cliente}}</td>
+                        <td>{{value.dias}}</td>
+                        <th>
+                            <button type="button" ng-click="excluir(value.id)" class="btn btn-sm btn-danger" alt="Excluir" title="Excluir">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                           
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+       
+    </div>
+    
+     <div class="col-md-12">
+        
+        <hr>
+    </div>
+
+</div>
