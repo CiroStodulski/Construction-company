@@ -124,22 +124,22 @@ angular.module('AppModule', ['ngRoute', 'ClienteModule', 'ImovelModule', 'Alugue
                         }).                           
                                 
                         when('/cliente', {
-                            templateUrl: 'partials/cliente.html',
+                            templateUrl: 'partials/cliente/cliente.html',
                             controller: 'ClienteController'
                         }).
                                 
                         when('/clienteNovo', {
-                            templateUrl: 'partials/clienteNovo.html',
+                            templateUrl: 'partials/cliente/clienteNovo.html',
                             controller: 'ClienteController'
                         }).
                                 
                                 
                         when('/imovel', {
-                            templateUrl: 'partials/imovel.html',
+                            templateUrl: 'partials/imovel/imovel.html',
                             controller: 'ImovelController'
                         }).
                         when('/imovelNovo', {
-                            templateUrl: 'partials/imovelNovo.html',
+                            templateUrl: 'partials/imovel/imovelNovo.html',
                             controller: 'ImovelController'
                         }).
                                 
@@ -147,11 +147,11 @@ angular.module('AppModule', ['ngRoute', 'ClienteModule', 'ImovelModule', 'Alugue
                                 
                         // PADRÃO
                         when('/', {
-                            templateUrl: 'partials/home.html',
+                            templateUrl: 'partials/default/home.html',
                             controller: 'AppController'
                         }).
                         when('/404', {
-                            templateUrl: 'partials/404.html'
+                            templateUrl: 'partials/default/404.html'
                         }).
                         // PÁGINA NÃO PREVISTA - 404 
                         otherwise({
