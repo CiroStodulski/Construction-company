@@ -30,19 +30,28 @@ angular.module('AppModule', ['ngRoute', 'ClienteModule', 'ImovelModule', 'Alugue
                         id: 100,
                         nome: 'Edificio Panama',
                         endereco: 'St.nigga 5',
-                        diaria: 100
+                        diaria: 100,
+                        diatotais: 0,
+                        pontosp:0,
+                        pontosn:0
                     },
                     {
                         id: 200,
                         nome: 'Blue Tower',
                         endereco: 'Rua dos mulambos 300',
-                        diaria: 50
+                        diaria: 50,
+                        diatotais: 0,
+                        pontosp:0,
+                        pontosn:0
                     },
                     {
                         id: 300,
                         nome: 'Edificio JP',
                         endereco: 'Na conceição / na vila',
-                        diaria: 10
+                        diaria: 10,
+                        diatotais: 0,
+                        pontosp:0,
+                        pontosn:0
                     }
                 ];
 
@@ -103,8 +112,8 @@ angular.module('AppModule', ['ngRoute', 'ClienteModule', 'ImovelModule', 'Alugue
                 .config(['$routeProvider', function ($routeProvider) {
                         $routeProvider.
                                 // CLIENTE
-                                when('/relatorio', {
-                                    templateUrl: 'partials/relatorio.html',
+                                when('/relatorioCli', {
+                                    templateUrl: 'partials/relatorioCliente.html',
                                     controller: 'ClienteController'
                                 }).
                                 when('/cliente-lista', {
@@ -115,6 +124,12 @@ angular.module('AppModule', ['ngRoute', 'ClienteModule', 'ImovelModule', 'Alugue
                                     templateUrl: 'partials/cliente-novo.html',
                                     controller: 'ClienteController'
                                 }).
+                                        
+                                 when('/relatorioImo', {
+                                    templateUrl: 'partials/relatorioImovel.html',
+                                    controller: 'ImovelController'
+                                }).  
+                                        
                                 when('/Imovel_Lista', {
                                     templateUrl: 'partials/Imovel_Lista.html',
                                     controller: 'ImovelController'
