@@ -48,7 +48,7 @@ controller('ImovelController', ['$scope', function($scope){
 
 		$scope.imovel.id = $scope.getFakeID();
 		$scope.listaImovel.push($scope.imovel);
-		$scope.redir('/Imovel_Lista');
+		$scope.redir('/imovel');
 	};
 
 }]);

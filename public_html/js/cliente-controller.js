@@ -46,7 +46,7 @@ controller('ClienteController', ['$scope', function($scope){
 
 		$scope.cliente.id = $scope.getFakeID();
 		$scope.listaCliente.push($scope.cliente);
-		$scope.redir('/cliente-lista');
+		$scope.redir('/cliente');
 	};
 
 }]);
