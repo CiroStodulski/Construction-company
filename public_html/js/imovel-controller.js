@@ -45,7 +45,7 @@ controller('ImovelController', ['$scope', function($scope){
 			alert('Campos obrigatórios não foram preenchidos!');
 			return;
 		}
-
+                $scope.imovel.dia
 		$scope.imovel.id = $scope.getFakeID();
 		$scope.listaImovel.push($scope.imovel);
 		$scope.redir('/imovel');
